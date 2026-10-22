@@ -25,13 +25,14 @@ public class CellPhone {
         phoneNumber = "";
         owner = "";
     }
+
     // /////// overloaded constructor////////
 public CellPhone(int serialNumber, String model, String carrier, String phoneNumber, String owner ){
         this.serialNumber =serialNumber;
         this.model = model;
         this.carrier = carrier;
         this.phoneNumber = phoneNumber;
-        this.owner = owner;
+        this.owner = owner + "overlade";
 }
 
     // Getters and setters: one pair per property.

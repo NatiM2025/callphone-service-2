@@ -72,15 +72,20 @@ public class CellPhoneApplication {
         // Close the scanner: we are done reading input
         scanner.close();
 
+        CellPhone cellPhoneOverload = new CellPhone(serialNumber,model,carrier,phoneNumber,owner);
+
         // Print both phones with one reusable method instead of repeating five println lines twice
         display(cellPhone1);
         display(cellPhone2);
+        display(cellPhoneOverload);
+
 
         // Each phone dials the other: the phone before the dot is the caller,
         // the number in the parentheses is the one being called.
         cellPhone1.dial(cellPhone2.getPhoneNumber());
         cellPhone2.dial(cellPhone1.getPhoneNumber());
     }
+
 
     // display() is static because it belongs to the application, not to a phone object,
     // so main() (also static) can call it directly. The phone to print is passed in as a parameter.
